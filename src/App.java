@@ -12,6 +12,7 @@ public class App {
             System.out.println("===== PE02 - HASH I SALT =====");
             System.out.println("1. Fase 1: Càlcul de resums");
             System.out.println("2. Fase 2: Verificació de la integritat dels missatges");
+            System.out.println("3. Fase 3: Registre d'usuaris amb salt");
             System.out.println("0. Sortir");
             System.out.print("Selecciona una fase: ");
             opcio = llegirEnter();
@@ -20,6 +21,8 @@ public class App {
                 case 1 : Fase1.main(args);
                     break;
                 case 2 : Fase2.main(args);
+                    break;
+                case 3 : Fase3.main(args);
                     break;
                 case 0 : System.out.println("Adéu!");
                     break;
