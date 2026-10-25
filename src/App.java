@@ -14,6 +14,7 @@ public class App {
             System.out.println("2. Fase 2: Verificació de la integritat dels missatges");
             System.out.println("3. Fase 3: Registre d'usuaris amb salt");
             System.out.println("4. Fase 4: Inici de sessió i verificació de contrasenyes");
+            System.out.println("5. Fase 5: Proves de la pràctica");
             System.out.println("0. Sortir");
             System.out.print("Selecciona una fase: ");
             opcio = llegirEnter();
@@ -26,6 +27,10 @@ public class App {
                 case 3 : Fase3.main(args);
                     break;
                 case 4 : Fase4.main(args);
+                    break;
+                case 5 :
+                    System.out.println("===== PART 5: PROVES DE LA PRÀCTICA =====");
+                    System.out.println("Esta a la carpeta /docs/Fase5 - HASH.pdf");
                     break;
                 case 0 : System.out.println("Adéu!");
                     break;
