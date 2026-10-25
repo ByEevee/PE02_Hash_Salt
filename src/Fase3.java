@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Fase3 {
     private static final Scanner scanner = App.scanner;
 
-    // Usuaris registrats en memòria: nom d'usuari -> {salt, hash}
     public static final Map<String, String[]> usuaris = new HashMap<>();
 
     private static final SecureRandom random = new SecureRandom();
@@ -77,19 +76,16 @@ public class Fase3 {
         }
     }
 
-    // Genera una salt aleatòria de 16 bytes i la retorna en hexadecimal
     public static String generarSalt() {
         byte[] salt = new byte[16];
         random.nextBytes(salt);
         return aHexadecimal(salt);
     }
 
-    // Calcula el hash SHA-256 de la salt seguida de la contrasenya
     public static String calcularHashAmbSalt(String contrasenya, String salt) {
         try {
             MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
 
-            // Primer afegim la salt i després la contrasenya
             sha256.update(salt.getBytes(StandardCharsets.UTF_8));
             byte[] hashResult = sha256.digest(contrasenya.getBytes(StandardCharsets.UTF_8));
 

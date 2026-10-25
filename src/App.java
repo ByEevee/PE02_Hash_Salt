@@ -13,6 +13,7 @@ public class App {
             System.out.println("1. Fase 1: Càlcul de resums");
             System.out.println("2. Fase 2: Verificació de la integritat dels missatges");
             System.out.println("3. Fase 3: Registre d'usuaris amb salt");
+            System.out.println("4. Fase 4: Inici de sessió i verificació de contrasenyes");
             System.out.println("0. Sortir");
             System.out.print("Selecciona una fase: ");
             opcio = llegirEnter();
@@ -23,6 +24,8 @@ public class App {
                 case 2 : Fase2.main(args);
                     break;
                 case 3 : Fase3.main(args);
+                    break;
+                case 4 : Fase4.main(args);
                     break;
                 case 0 : System.out.println("Adéu!");
                     break;
